@@ -6,20 +6,13 @@ let poses = [];
 
 function preload() {
   img = loadImage('data/test.jpg');
-  //bodypix = ml5.bodyPix();
+  bodypix = ml5.bodyPix();
 }
 
 function setup() {
   createCanvas(480, 560);
   background(51);
-  //bodypix.segment(img, gotResults);
-  imageReady();
-}
-
-function modelReady() {
-    console.log("Model Loaded");
-  
-    poseNet.singlePose(img);
+  bodypix.segment(img, gotResults);
 }
 
 function imageReady() {
@@ -37,26 +30,16 @@ function imageReady() {
     });
   }
 
-function draw() {
-    if (poses.length > 0) {
-    //   image(img, 0, 0, width, height);
-      drawSkeleton(poses);
-      drawKeypoints(poses);
-    //   noLoop(); // stop looping when the poses are estimated
-    }
+function gotResults(err, result) {
+  if (err) {
+    console.log(err);
+    return;
   }
-  
-
-// function gotResults(err, result) {
-//   if (err) {
-//     console.log(err);
-//     return;
-//   }
-//   segmentation = result;
-//   console.log(segmentation);
-//   background(0);
-//   image(segmentation.backgroundMask, 0, 0, width, height);
-// }
+  segmentation = result;
+  console.log(segmentation);
+  background(0);
+  image(segmentation.backgroundMask, 0, 0, width, height);
+}
 
 function drawKeypoints() {
     // Loop through all the poses detected
