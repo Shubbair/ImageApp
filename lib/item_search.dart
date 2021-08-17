@@ -23,11 +23,10 @@ class ItemSearch extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.90,
                     margin: EdgeInsets.only(top: 15, bottom: 15),
                     child: TextFormField(
-                      onFieldSubmitted:(text){
-                         print(text);
+                      onFieldSubmitted: (text) {
+                        print(text);
                       },
                       decoration: InputDecoration(
-                        
                         prefixIcon: Icon(
                           Icons.search,
                           color: Colors.grey[600],
@@ -39,7 +38,8 @@ class ItemSearch extends StatelessWidget {
                           //borderSide: const BorderSide(),
                         ),
                         hintStyle: TextStyle(
-                            color: Colors.grey[500], fontFamily: "WorkSansLight"),
+                            color: Colors.grey[500],
+                            fontFamily: "WorkSansLight"),
                         filled: true,
                         fillColor: Colors.grey[200],
                         hintText: 'Search',
@@ -52,16 +52,42 @@ class ItemSearch extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    margin : EdgeInsets.only(top:16),
+                    margin: EdgeInsets.only(top: 16),
                     width: 175,
-                    height : 200,
-                    color: Colors.red,
-                    child: Text('data'),
+                    height: 200,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('images/1.png'),
+                          fit: BoxFit.cover
+                        ),
+                        color: Colors.green[300],
+                        borderRadius: BorderRadius.all(Radius.circular(6))),
+                    child: Center(
+                        child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                            width: 175,
+                            child: ElevatedButton(
+                          
+                          style: ElevatedButton.styleFrom(
+                            elevation: 0.0,
+                            primary: Colors.greenAccent[700], // background
+                            onPrimary: Colors.white, // foreground
+                          ),
+                          onPressed: () {},
+                          child: Text(
+                            'Login',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                        )),
+                      ],
+                    )),
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 16,top:16),
+                    margin: EdgeInsets.only(left: 16, top: 16),
                     width: 175,
-                    height : 200,
+                    height: 200,
                     color: Colors.red,
                     child: Text('data'),
                   ),
@@ -71,16 +97,16 @@ class ItemSearch extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top:16),
+                    margin: EdgeInsets.only(top: 16),
                     width: 175,
-                    height : 200,
+                    height: 200,
                     color: Colors.red,
                     child: Text('data'),
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 16,top:16),
+                    margin: EdgeInsets.only(left: 16, top: 16),
                     width: 175,
-                    height : 200,
+                    height: 200,
                     color: Colors.red,
                     child: Text('data'),
                   ),
@@ -90,16 +116,16 @@ class ItemSearch extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    margin : EdgeInsets.only(top:16),
+                    margin: EdgeInsets.only(top: 16),
                     width: 175,
-                    height : 200,
+                    height: 200,
                     color: Colors.red,
                     child: Text('data'),
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 16,top:16),
+                    margin: EdgeInsets.only(left: 16, top: 16),
                     width: 175,
-                    height : 200,
+                    height: 200,
                     color: Colors.red,
                     child: Text('data'),
                   ),
