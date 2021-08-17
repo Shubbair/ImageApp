@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'image.dart';
+import 'image_item.dart';
+
 class ItemSearch extends StatelessWidget {
   const ItemSearch({Key? key}) : super(key: key);
 
@@ -51,86 +54,42 @@ class ItemSearch extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    margin: EdgeInsets.only(top: 16),
-                    width: 175,
-                    height: 200,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('images/1.png'),
-                          fit: BoxFit.cover
-                        ),
-                        color: Colors.green[300],
-                        borderRadius: BorderRadius.all(Radius.circular(6))),
-                    child: Center(
-                        child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                            width: 175,
-                            child: ElevatedButton(
-                          
-                          style: ElevatedButton.styleFrom(
-                            elevation: 0.0,
-                            primary: Colors.greenAccent[700], // background
-                            onPrimary: Colors.white, // foreground
-                          ),
-                          onPressed: () {},
-                          child: Text(
-                            'Login',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        )),
-                      ],
-                    )),
+                  new ImageItem(
+                    img: new ImageStruct(
+                        path: 'images/1.png', marginTop: 10.0, marginLeft: 0.0),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(left: 16, top: 16),
-                    width: 175,
-                    height: 200,
-                    color: Colors.red,
-                    child: Text('data'),
+                   new ImageItem(
+                    img: new ImageStruct(
+                        path: 'images/2.png', marginTop: 10.0, marginLeft: 16.0),
                   ),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    margin: EdgeInsets.only(top: 16),
-                    width: 175,
-                    height: 200,
-                    color: Colors.red,
-                    child: Text('data'),
+                  new ImageItem(
+                    img: new ImageStruct(
+                        path: 'images/3.png', marginTop: 16.0, marginLeft: 0.0),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(left: 16, top: 16),
-                    width: 175,
-                    height: 200,
-                    color: Colors.red,
-                    child: Text('data'),
+                   new ImageItem(
+                    img: new ImageStruct(
+                        path: 'images/4.png', marginTop: 16.0, marginLeft: 16.0),
                   ),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    margin: EdgeInsets.only(top: 16),
-                    width: 175,
-                    height: 200,
-                    color: Colors.red,
-                    child: Text('data'),
+                  new ImageItem(
+                    img: new ImageStruct(
+                        path: 'images/5.png', marginTop: 16.0, marginLeft: 0.0),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(left: 16, top: 16),
-                    width: 175,
-                    height: 200,
-                    color: Colors.red,
-                    child: Text('data'),
+                   new ImageItem(
+                    img: new ImageStruct(
+                        path: 'images/6.png', marginTop: 16.0, marginLeft: 16.0),
                   ),
                 ],
-              ),
+              )
             ],
           ),
         ),
