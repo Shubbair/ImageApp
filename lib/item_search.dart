@@ -56,11 +56,11 @@ class ItemSearch extends StatelessWidget {
                 children: [
                   new ImageItem(
                     img: new ImageStruct(
-                        path: 'images/1.png', marginTop: 10.0, marginLeft: 0.0),
+                        path: 'images/1.png', marginTop: 10.0, marginLeft: 0.0, marginBottom: 0.0),
                   ),
                    new ImageItem(
                     img: new ImageStruct(
-                        path: 'images/2.png', marginTop: 10.0, marginLeft: 16.0),
+                        path: 'images/2.png', marginTop: 10.0, marginLeft: 16.0, marginBottom: 0.0),
                   ),
                 ],
               ),
@@ -69,11 +69,11 @@ class ItemSearch extends StatelessWidget {
                 children: [
                   new ImageItem(
                     img: new ImageStruct(
-                        path: 'images/3.png', marginTop: 16.0, marginLeft: 0.0),
+                        path: 'images/3.png', marginTop: 16.0, marginLeft: 0.0,marginBottom: 0.0),
                   ),
                    new ImageItem(
                     img: new ImageStruct(
-                        path: 'images/4.png', marginTop: 16.0, marginLeft: 16.0),
+                        path: 'images/4.png', marginTop: 16.0, marginLeft: 16.0, marginBottom: 0.0),
                   ),
                 ],
               ),
@@ -82,11 +82,11 @@ class ItemSearch extends StatelessWidget {
                 children: [
                   new ImageItem(
                     img: new ImageStruct(
-                        path: 'images/5.png', marginTop: 16.0, marginLeft: 0.0),
+                        path: 'images/5.png', marginTop: 16.0, marginLeft: 0.0, marginBottom: 16.0),
                   ),
                    new ImageItem(
                     img: new ImageStruct(
-                        path: 'images/6.png', marginTop: 16.0, marginLeft: 16.0),
+                        path: 'images/6.png', marginTop: 16.0, marginLeft: 16.0, marginBottom: 16.0),
                   ),
                 ],
               )
