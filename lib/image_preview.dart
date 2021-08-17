@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class ImagePreview extends StatelessWidget {
-  const ImagePreview({Key? key}) : super(key: key);
+class GetData extends StatelessWidget {
+  const GetData({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: null,
+      child: Image.network('https://temp.media/?height=400&width=500&text=test&category=technology&color=IndianRed'),
     );
   }
 }

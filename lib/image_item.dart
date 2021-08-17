@@ -41,9 +41,12 @@ class ImageItem extends StatelessWidget {
                       ),
                       IconButton(onPressed: () {}, icon: Icon(Icons.save_alt)),
                     ],
-                  ))),
+                  )
+                )
+          ),
         ],
-      )),
+      )
+      ),
     );
   }
 }

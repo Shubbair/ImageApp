@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const ItemSearch(),
-        '/image': (context) => const ImagePreview(),
+        '/image': (context) => const GetData(),
       },
     );
   }

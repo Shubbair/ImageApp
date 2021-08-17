@@ -89,7 +89,7 @@ class ItemSearch extends StatelessWidget {
                         path: 'images/6.png', marginTop: 16.0, marginLeft: 16.0, marginBottom: 16.0),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
