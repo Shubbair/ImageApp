@@ -28,6 +28,7 @@ class ItemSearch extends StatelessWidget {
                     child: TextFormField(
                       onFieldSubmitted: (text) {
                         print(text);
+                        Navigator.of(context).pushNamed('/image');
                       },
                       decoration: InputDecoration(
                         prefixIcon: Icon(
