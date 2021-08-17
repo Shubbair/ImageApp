@@ -45,6 +45,16 @@ class ItemSearch extends StatelessWidget {
               ),
             ],
           ),
+          Row(
+            children: [
+              Container(
+                width: 200,
+                height : 50,
+                color: Colors.red,
+                child: Text('data'),
+              )
+            ],
+          )
         ],
       ),
     );
