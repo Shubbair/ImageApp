@@ -20,7 +20,7 @@ class GetData extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.black87),
       ),
       body: CachedNetworkImage(
-   imageUrl: "http://via.placeholder.com/350x150",
+   imageUrl: Url,
    placeholder: (context, url) => new CircularProgressIndicator(),
    errorWidget: (context, url, error) => new Icon(Icons.error),
  ),
