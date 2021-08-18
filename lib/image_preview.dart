@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 
 class GetData extends StatelessWidget {
   const GetData({Key? key}) : super(key: key);
+  
+  static const int height = 400;
+  static const int width = 500;
+  static const String text = 'yea';
+  static const String categiory = 'technology';
+  static const String color = 'white';
+  static const String Url = 'https://temp.media/?height=$height&width=$width&text=$text&category=$categiory&color=$color';
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +18,8 @@ class GetData extends StatelessWidget {
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.black87),
       ),
-      body: Center(child: Image.network('https://temp.media/?height=400&width=500&text=test&category=technology&color=IndianRed')),
+      body: Image.network(Url),
+      // body: Center(child: Image.network('https://temp.media/?height=$height&width=$width&text=test&category=technology&color=IndianRed')),
     );
   }
 }
