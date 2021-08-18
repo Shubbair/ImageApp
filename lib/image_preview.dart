@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class GetData extends StatelessWidget {
@@ -18,8 +19,11 @@ class GetData extends StatelessWidget {
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.black87),
       ),
-      body: Image.network(Url),
-      // body: Center(child: Image.network('https://temp.media/?height=$height&width=$width&text=test&category=technology&color=IndianRed')),
+      body: CachedNetworkImage(
+   imageUrl: "http://via.placeholder.com/350x150",
+   placeholder: (context, url) => new CircularProgressIndicator(),
+   errorWidget: (context, url, error) => new Icon(Icons.error),
+ ),
     );
   }
 }
