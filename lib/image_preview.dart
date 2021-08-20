@@ -3,30 +3,65 @@ import 'package:flutter/material.dart';
 
 class GetData extends StatelessWidget {
   const GetData({Key? key}) : super(key: key);
-  
+
   static const int height = 400;
   static const int width = 500;
   static const String text = 'yea';
   static const String categiory = 'technology';
   static const String color = 'white';
-  static const String Url = 'https://temp.media/?height=$height&width=$width&text=$text&category=$categiory&color=$color';
+  static const String Url =
+      'https://temp.media/?height=$height&width=$width&text=$text&category=$categiory&color=$color';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.orange[100],
       appBar: AppBar(
-        backgroundColor: Color(0XFFFAFAFA),
+        backgroundColor: Colors.orangeAccent[700],
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black87),
+        iconTheme: IconThemeData(color: Colors.grey[50]),
       ),
-      body: Center(
-        child: CachedNetworkImage(
-   imageUrl: Url,
-   placeholder: (context, url) => new CircularProgressIndicator(
-     color: Colors.black87,
-   ),
-   errorWidget: (context, url, error) => new Icon(Icons.error),
- ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+                    Center(
+            child: 
+            Container( 
+              width: MediaQuery.of(context).size.width * 0.9,
+            child: CachedNetworkImage(
+              imageUrl: Url,
+              placeholder: (context, url) => new CircularProgressIndicator(
+                color: Colors.black87,
+              ),
+              errorWidget: (context, url, error) => new Icon(Icons.error),
+            ),
+          ),
+         ),
+          Center(
+            child: 
+            Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0.0,
+                      primary: Colors.orangeAccent[700], // background
+                      onPrimary: Colors.white, // foreground
+                    ),
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Save',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        IconButton(onPressed:(){}, icon: Icon(Icons.save_alt)),
+                      ],
+                    )
+                  ),
+            ),
+          )
+        ],
       ),
     );
   }

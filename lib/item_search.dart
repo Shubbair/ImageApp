@@ -10,7 +10,9 @@ class ItemSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
+      backgroundColor: Colors.orange[100],
       appBar: AppBar(
+        elevation: 0.0,
         title: Text('Image Gallery'),
         centerTitle: true,
         backgroundColor: Colors.orangeAccent[700],
@@ -45,7 +47,7 @@ class ItemSearch extends StatelessWidget {
                             color: Colors.grey[500],
                             fontFamily: "WorkSansLight"),
                         filled: true,
-                        fillColor: Colors.grey[200],
+                        fillColor: Colors.grey[50],
                         hintText: 'Search',
                       ),
                     ),
