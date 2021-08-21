@@ -28,9 +28,8 @@ class ItemSearch extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.90,
                     margin: EdgeInsets.only(top: 15, bottom: 15),
                     child: TextFormField(
-                      onFieldSubmitted: (text) {
-                        print(text);
-                        Navigator.of(context).pushNamed('/image');
+                      onFieldSubmitted: (text) {  
+                        Navigator.of(context).pushNamed('/image',arguments:'Technology image , 500 width , 600 height , whohoo text , white color');
                       },
                       decoration: InputDecoration(
                         prefixIcon: Icon(
