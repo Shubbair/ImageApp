@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-List getParam(param) {
+List<dynamic> getParam(param) {
   String data = param.toLowerCase();
   RegExp regExp = new RegExp(r'(,| , | ,|, )');
   List<String> result = data.split(regExp);
