@@ -29,7 +29,7 @@ class ItemSearch extends StatelessWidget {
                     margin: EdgeInsets.only(top: 15, bottom: 15),
                     child: TextFormField(
                       onFieldSubmitted: (text) {  
-                        Navigator.of(context).pushNamed('/image',arguments:'Technology image , 500 width , 600 height , whohoo text , white color');
+                        Navigator.of(context).pushNamed('/image',arguments:text);
                       },
                       decoration: InputDecoration(
                         prefixIcon: Icon(

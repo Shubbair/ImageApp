@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-String imageName = 'technology', width = '600', height = '600', text = 'test', color = 'white';
+String imageName = 'technology', width = '400', height = '400', text = 'test', color = 'white';
 
 void getParam(param) {
   String data = param.toLowerCase();
@@ -53,10 +53,11 @@ class GetData extends StatelessWidget {
             Container( 
               width: MediaQuery.of(context).size.width * 0.9,
             child: Container(
+              
               child: CachedNetworkImage(
-                width: 100,
                 imageUrl: Url,
                 placeholder: (context, url) => new CircularProgressIndicator(
+                  strokeWidth: 2.0,
                   color: Colors.black87,
                 ),
                 errorWidget: (context, url, error) => new Icon(Icons.error),
