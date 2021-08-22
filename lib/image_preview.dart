@@ -37,8 +37,8 @@ class GetData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final result = ModalRoute.of(context)!.settings.arguments.toString();
-    String list = getParam(result) as String;
-    print(list);
+    // String list = getParam(result);
+    print(result);
        const int height = 400;
    const int width = 500;
    const String text = 'yea';
