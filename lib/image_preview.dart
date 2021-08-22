@@ -29,9 +29,6 @@ void getParam(param) {
 }
 class GetData extends StatelessWidget {
   const GetData({Key? key}) : super(key: key);
-
-  // static const String Url =
-  //     'https://temp.media/?height=$height&width=$width&text=$text&category=$categiory&color=$color';
   @override
   Widget build(BuildContext context) {
     final result = ModalRoute.of(context)!.settings.arguments.toString();
