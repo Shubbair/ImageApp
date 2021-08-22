@@ -1,17 +1,16 @@
-# image_app
+# Image App 
 
-A new Flutter project.
+## Flutter project of search for image depend on :
 
-## Getting Started
+Types : [ nature , people , fashion , food , animals , technology ]
 
-This project is a starting point for a Flutter application.
+Colors : text color red , green .... you can checkout the [Available Color](https://docs.temp.media/colors) 🌈
 
-A few resources to get you started if this is your first Flutter project:
+text : text in the center of image
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+the website [here](https://temp.media/) 📄
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# ImageApp
+## Actions
+
+- [x] Search Image
+- [ ] Save image to the gallery
