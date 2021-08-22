@@ -1,13 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-List<dynamic> getParam(param) {
+String imageName = 'technology', width = '600', height = '600', text = 'test', color = 'white';
+
+void getParam(param) {
   String data = param.toLowerCase();
   RegExp regExp = new RegExp(r'(,| , | ,|, )');
   List<String> result = data.split(regExp);
   int dataLength = data.split(regExp).length;
 
-  String imageName = 'technology', width = '500', height = '600', text = 'test', color = 'white';
   for (int i = 0; i < dataLength; i++) {
     if (result[i].split(' ')[1] == 'image') {
       imageName = result[i].split(' ')[0];
@@ -25,25 +26,18 @@ List<dynamic> getParam(param) {
       color = result[i].split(' ')[0];
     }
   }
-  return [imageName,width,height,text,color];
 }
 class GetData extends StatelessWidget {
   const GetData({Key? key}) : super(key: key);
 
   // static const String Url =
   //     'https://temp.media/?height=$height&width=$width&text=$text&category=$categiory&color=$color';
- static const String Url =
-      'images/1.png';
   @override
   Widget build(BuildContext context) {
     final result = ModalRoute.of(context)!.settings.arguments.toString();
-    // String list = getParam(result);
-    print(result);
-       const int height = 400;
-   const int width = 500;
-   const String text = 'yea';
-   const String categiory = 'result!.toString()[0]';
-   const String color = 'white';
+    getParam(result);
+    String Url =
+    'https://temp.media/?height=$height&width=$width&text=$text&category=$imageName&color=$color';
     return Scaffold(
       backgroundColor: Colors.orange[100],
       appBar: AppBar(
