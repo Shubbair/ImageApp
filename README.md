@@ -1,4 +1,4 @@
-# Image App 
+# Image APP
 
 ## Flutter project of search for image depend on :
 
