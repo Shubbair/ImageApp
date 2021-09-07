@@ -1,6 +1,10 @@
 # Image APP
 
-![image](1.png)
+<p align="center">
+ <img width="48%" src="1.png" />
+ <img width="48%" src="2.png" />
+</p>
+
 
 ## Flutter project of search for image depend on :
 
